@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let singleTodo of todos">
+    {{singleTodo.title}}
+    <input [(ngModel)]="singleTodo.done" type="checkbox" (change)="checkValue(singleTodo.done)" />
+    <button (click)="showTodo(singleTodo.id)">Edit</button>
+    <button (click)="deleteTodo(singleTodo.id)">Delete</button>
+  </li>
+</ul>
+<p>You have done {{doneTodos.length}} out of {{todos.length}}</p>
